@@ -1,6 +1,9 @@
 import React, { useContext, useRef, useState } from "react";
 import './Contact.css'
 import emailjs from "@emailjs/browser";
+ import FormMain from '../Form2/FormMain.jsx'        
+  // import Form from '../Form/Form.js'
+
 import { themeContext } from "../../Context";
 
 const Contact=()=> {
@@ -36,6 +39,7 @@ const Contact=()=> {
 
   return (
     <div className="contact-form" id="contact">
+
       {/* left side copy and paste from work section */}
       <div className="w-left">
         <div className="awesome">
@@ -49,8 +53,16 @@ const Contact=()=> {
         </div>
       </div>
    {/* right side form */}
-   <div className="c-right">
-        <form ref={form} onSubmit={sendEmail}>
+      <div className="c-right">
+        
+        {/* <Form /> */}
+        <FormMain />
+        <div
+            className="blur c-blur1"
+            style={{ background: "var(--purple)" }}
+          ></div>
+
+        {/* <form ref={form} onSubmit={sendEmail}>
         <input type="text" name="user_name" className="user"  placeholder="Name"/>
           <input type="email" name="user_email" className="user" placeholder="Email"/>
           <textarea name="message" className="user" placeholder="Message"/>
@@ -61,10 +73,8 @@ const Contact=()=> {
             style={{ background: "var(--purple)" }}
           ></div>
         </form>
+       */}
       </div>
-
-
-
   </div>
 
 

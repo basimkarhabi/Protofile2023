@@ -12,6 +12,8 @@
     justify-content: center;
     position: relative;
     flex: 1;
+    padding: 0 3rem 0 3rem;
+    margin-bottom: 75px;
 }
 
 .c-right>form
